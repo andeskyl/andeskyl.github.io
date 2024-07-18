@@ -120,3 +120,28 @@
 	from {opacity: 1}
 	to {opacity: 0}
 }
+
+.paper-item {
+	padding-bottom: 9px;
+}
+  
+.paper .title {
+	font-size: 20px;
+	margin-bottom: 0;
+	font-weight: 400;
+}
+
+.paper .author {
+	font-size: 16px;
+	margin-bottom: 0;
+}
+
+.paper .note {
+	font-size: 8px;
+	margin-bottom: 0;
+}
+
+.paper .venue {
+	font-size: 16px;
+	margin-bottom: 5px;
+}
