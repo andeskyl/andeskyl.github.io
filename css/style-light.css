@@ -1,0 +1,36 @@
+.body{
+	background-color: white;
+	color: black;
+}
+
+.header{
+	background-image: url("../img/background-light.jpg");
+}
+
+.no-dec{
+	color: black;
+}
+
+.no-dec:hover{
+	color: blue;
+}
+
+.bg-lightblue{
+	background: lightblue;
+}
+
+.bg-lightgrey{
+	background: lightgrey;
+}
+
+.bg-thistle{
+	background: thistle;
+}
+
+.bg-lightsteelblue{
+	background: lightsteelblue; 
+}
+
+.bg-wheat{
+	background: wheat;
+}
