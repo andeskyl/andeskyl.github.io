@@ -106,7 +106,6 @@ function popupInit(){
 	let popup_img = document.querySelector("#main-popup-img");
 	let popup_caption = document.querySelector("#main-popup-caption");
 	let popup_close = document.querySelector("#main-popup-close");
-	let major_gpa = document.querySelector("#popup-major-gpa");
 	let estr_cuhk = document.querySelector("#popup-estr-cuhk");
 	let pkm_team = document.querySelector("#popup-pkm-team");
 	let ptcg_deck = document.querySelector("#popup-ptcg-deck");
@@ -116,10 +115,6 @@ function popupInit(){
 		popup_box.classList.toggle("hide");
 	}
 	// set onClick event on links
-	if(major_gpa != null)
-		addPopupOnClick(popup_box, popup_img, popup_caption, major_gpa, 
-			"./img/popup/major_gpa.png", 
-			"A list of all courses included in the calculation of Major GPA.");
 	if(estr_cuhk != null)
 		addPopupOnClick(popup_box, popup_img, popup_caption, estr_cuhk, 
 			"./img/popup/estr_cuhk.png", 
@@ -131,11 +126,11 @@ function popupInit(){
 	if(ptcg_deck != null)
 		addPopupOnClick(popup_box, popup_img, popup_caption, ptcg_deck, 
 			"./img/popup/ptcg_deck.jpg",
-			"My previous PTCG deck (current deck coming soon).");
+			"My current PTCG deck.");
 	if(sushi != null)
 		addPopupOnClick(popup_box, popup_img, popup_caption, sushi, 
 			"./img/popup/sushi.jpg",
-			"Amazing sushi from a well-known sushi shop in Tokyo.");
+			"Fancy sushi from a well-known restaurant in Fukuoka.");
 	return true;
 }
 
