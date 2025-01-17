@@ -109,7 +109,6 @@ function popupInit(){
 	let estr_cuhk = document.querySelector("#popup-estr-cuhk");
 	let pkm_team = document.querySelector("#popup-pkm-team");
 	let ptcg_deck = document.querySelector("#popup-ptcg-deck");
-	let sushi = document.querySelector("#popup-sushi");
 	// set onClick event on close button
 	popup_close.onclick = function(){
 		popup_box.classList.toggle("hide");
@@ -122,15 +121,11 @@ function popupInit(){
 	if(pkm_team != null)
 		addPopupOnClick(popup_box, popup_img, popup_caption, pkm_team, 
 			"./img/popup/pkm_team.jpg",
-			"My previous Pokemon team.");
+			"My previous (very long time ago...) Pokemon team.");
 	if(ptcg_deck != null)
 		addPopupOnClick(popup_box, popup_img, popup_caption, ptcg_deck, 
 			"./img/popup/ptcg_deck.jpg",
-			"My current PTCG deck.");
-	if(sushi != null)
-		addPopupOnClick(popup_box, popup_img, popup_caption, sushi, 
-			"./img/popup/sushi.jpg",
-			"Fancy sushi from a well-known restaurant in Fukuoka.");
+			"My current (2025/01) PTCG deck.");
 	return true;
 }
 
