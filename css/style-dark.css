@@ -1,0 +1,49 @@
+.body{
+	background-color: #212529;
+	color: white;
+}
+
+.name-block{
+	background-image: url("../img/banner-dark.jpg");
+}
+
+.no-dec{
+	color: white;
+}
+
+.no-dec:hover{
+	color: lightblue;
+}
+
+.no-dec-dark{
+	text-decoration: none;
+	color: white;
+}
+
+.no-dec-dark:hover{
+	color: lightblue;
+}
+
+.table-dark{
+	--bs-table-bg: transparent;
+}
+
+.bg-lightblue{
+	background: #002432;
+}
+
+.bg-lightgrey{
+	background: #191919;
+}
+
+.bg-thistle{
+	background: #260e26;
+}
+
+.bg-lightsteelblue{
+	background: #061a33; 
+}
+
+.bg-wheat{
+	background: #311801;
+}
