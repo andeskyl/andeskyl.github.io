@@ -1,0 +1,42 @@
+<div class="container mt-3">
+    <section class="bg-thistle row p-3">
+        <div>
+            <h2 class="section-heading text-start">My Research</h2>
+            <hr/>
+            <h3>Secure Multi-Party Computation</h3>
+            <ul>
+                <li><div class="paper">
+                    <p class="title">Sort, Sweep, Mirror: Batch Private Interval Lookup with Logarithmic Cost</a>
+                    <p class="author"><b>Andes Y. L. Kei</b>, Lucien K. L. Ng, Jack P. K. Ma, Sherman S. M. Chow</p>
+                    <p class="venue">IEEE S&P 2026 (AR: 12.8% = 118/925 for Cycle 1)</p>
+                </div></li>
+                <li><div class="paper">
+                    <a class="title no-dec" href="https://www.ndss-symposium.org/ndss-paper/shaft-secure-handy-accurate-and-fast-transformer-inference/" target="_blank">SHAFT: Secure, Handy, Accurate, and Fast Transformer Inference</a>
+                    <p class="author"><b>Andes Y. L. Kei</b>, Sherman S. M. Chow</p>
+                    <p class="venue">NDSS 2025 (AR: 14.5% = 137/936 for Fall Cycle, <b>Distinguished Artifact Award</b>)</p>
+                    <p class="abs-btn"><a href="javascript:void(0);" class="no-dec">View Abstract ▸</a></p>
+                    <p class="abstract hide">
+                        Adoption of transformer-based machine learning models is growing, raising concerns about sensitive data exposure. Nonetheless, current secure inference solutions incur substantial overhead due to their extensive reliance on non-linear protocols, such as softmax and Gaussian error linear unit (GELU). Driven by numerical stability needs, softmax approximations (e.g., NeurIPS 2021) typically extract the maximum element of an input vector, incurring logarithmic rounds (in the input length). Existing GELU protocols (e.g., S&P 2024) use piecewise approximations with high-degree polynomials that rely heavily on secure multiplications and comparisons, which are expensive. Such complexities also hinder model owners unfamiliar with cryptography from deploying their custom models easily.
+                        <br><br>
+                        SHAFT, our proposed system, provides a secure, handy, accurate, and fast transformer inference framework for deployment. Highlights of our contributions include 1) the first constant-round softmax protocol for transformers, uniquely combining the benefits of input clipping and characteristics of ordinary differential equations, and 2) a highly accurate GELU protocol on a novel characterization designed for Fourier series approximation. Extending to broader contexts, our new protocols also apply to general neural networks that use softmax as the final layer and to transformer architectures with different activation functions. Remarkably, SHAFT outperforms state-of-the-art SIGMA (PETS 2024), which uses secret sharing, and BumbleBee (NDSS 2025), which additionally uses RLWE-based homomorphic encryption. More specifically, SHAFT minimizes communication by 25-41%. and matches SIGMA's running time while surpassing BumbleBee in running time by 4.6-5.3× on LANs and 2.9-4.4× on WANs. Alongside these improvements, SHAFT attains accuracy comparable to plaintext models, confirming its numerical stability. Next in this progression, SHAFT provides an accessible open-source framework for secure and handy deployment by smoothly integrating with the Hugging Face library (EMNLP Demos 2020).
+                    </p>
+                </div></li>
+            </ul>
+            <hr/>
+        </div>
+        <div>
+        <h2>Professional Activities</h2>
+            <hr/>
+            <ul>
+                <li>External Reviewers:
+                    <ul>
+                        <li>2026: AsiaCCS</li>
+                        <li>2025: ARES, AsiaCCS, Asiacrypt, CODASPY, DSC, ESORICS, Indocrypt, NDSS, NSS, PKC, S&P, TDSC</li>
+                        <li>2024: ARES, Asiacrypt, CANS, ICICS, ISISC, RAID, TDSC, Usenix Security</li>
+                        <li>2023: IJIS</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>

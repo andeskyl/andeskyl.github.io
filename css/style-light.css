@@ -1,0 +1,36 @@
+.body{
+	background-color: white;
+	color: black;
+}
+
+.name-block{
+	background-image: url("../img/banner-light.jpg");
+}
+
+.no-dec{
+	color: black;
+}
+
+.no-dec:hover{
+	color: blue;
+}
+
+.bg-lightblue{
+	background: lightblue;
+}
+
+.bg-lightgrey{
+	background: lightgrey;
+}
+
+.bg-thistle{
+	background: thistle;
+}
+
+.bg-lightsteelblue{
+	background: lightsteelblue; 
+}
+
+.bg-wheat{
+	background: wheat;
+}

@@ -1,0 +1,175 @@
+.body{
+	font-family: sans-serif;
+}
+
+.name-block{
+	background-size: 100%;
+	background-position: center;
+	color: white;
+	text-shadow: 3px 3px 3px #0a050f, 0 0 1rem #0A050F, 0 0 0.2rem #0a050f;
+}
+
+.menu{
+	opacity: .95;
+}
+
+.progress{
+	height: 3px;
+}
+
+.progress-bar{
+	height: 5px;
+}
+
+.justify{
+	text-align: justify;
+}
+
+.hide{
+	display: none;
+}
+
+.no-dec{
+	text-decoration: none;
+}
+
+.pic-w-600px{
+	width: 600px;
+	height: auto;
+	max-width: 100%;
+}
+
+.pic-w-90{
+	height: auto;
+	max-width: 90%;
+}
+
+.popup-box{
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.9);
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	padding-top: 100px;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	z-index: 1021;
+}
+
+.popup-img{
+	display: block;
+	margin: auto;
+	height: 75%;
+	animation-name: zoom;
+	animation-duration: 0.5s;
+}
+
+.popup-caption{
+	display: block;
+	padding: 10px 0;
+	margin: auto;
+	height: 150px;
+	width: 80%;
+	max-width: 700px;
+	color: #ccc;
+	text-align: center;
+	animation-name: zoom;
+	animation-duration: 0.5s;
+}
+
+.popup-close{
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.popup-close:hover,
+.popup-close:focus{
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 768px){
+	.popup-img{
+		height: auto;
+		width: 80%;
+	}
+}
+
+.to-top-btn{
+	background-color: #1099dd;
+	position: fixed;
+	padding: 8px;
+	bottom: 10px;
+	right: 10px;
+	width: 40px;
+    height: 40px;
+	border-radius: 4px;
+	text-decoration: none;
+	text-align: center;
+	color: white;
+	font-size: 16px;
+	z-index: 10;
+	animation-name: fade-in;
+	animation-duration: 0.5s;
+}
+
+@keyframes zoom{
+	from {transform: scale(0)}
+	to {transform: scale(1)}
+}
+
+@keyframes fade-in{
+	from {opacity: 0}
+	to {opacity: 1}
+}
+
+@keyframes fade-out{
+	from {opacity: 1}
+	to {opacity: 0}
+}
+
+.paper{
+	margin-bottom: 9px;
+}
+  
+.paper .title{
+	font-size: 20px;
+	margin-bottom: 0;
+	font-weight: 400;
+}
+
+.paper .author{
+	font-size: 16px;
+	margin-bottom: 0;
+}
+
+.paper .note{
+	font-size: 8px;
+	margin-bottom: 0;
+}
+
+.paper .venue{
+	font-size: 16px;
+	margin-bottom: 3px;
+}
+
+.paper .abs-btn{
+	margin-bottom: 3px;
+}
+
+.paper .abstract{
+	font-size: 16px;
+	margin-bottom: 12px;
+}
+
+.project .title{
+	display: block;
+	font-size: calc(1.3rem + .6vw);
+}

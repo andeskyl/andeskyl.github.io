@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="Andes Y. L. Kei's webpage" />
+		<meta name="author" content="Andes Y. L. Kei" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="google-site-verification" content="BPwiH8yakGTpR5LPnY89ozA_5JJxdrfHY2TpQcB9mi0" />
+		<title>Andes Y. L. Kei's Page</title>
+		<link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+			integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
+			crossorigin="anonymous" referrerpolicy="no-referrer"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" 
+			integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" 
+			crossorigin="anonymous" referrerpolicy="no-referrer"/>
+		<link rel="stylesheet" href="/css/style.css"/>
+		<link rel="stylesheet" href="/css/style-light.css" id="theme-css"/>
+	</head>
+    <body class="body">
+        <header class="header text-center sticky-top">
+            <div class="name-block p-4">
+                <h1>Andes Y. L. Kei</h1>
+                <h4>B.Eng. (FinTech), Ph.D. (IERG) Candidate</h4>
+            </div>
+            <nav id="menu" class="menu bg-light">
+                <div id="nav-navbar" class="navbar navbar-expand justify-content-center my-0 py-3">
+                    <ul class="navbar-nav">
+                        <li class="nav-item p-2"><a class="no-dec" href="#about">About Me</a></li>
+                        <li class="nav-item p-2"><a class="no-dec" href="#research">Research</a></li>
+                        <li class="nav-item p-2"><a class="no-dec" href="#project">Project</a></li>
+                        <li class="nav-item p-2"><a class="no-dec" href="#hobby">Hobby</a></li>
+                        <li class="nav-item p-2"><a class="no-dec" href="javascript:void(0)" onclick="toggleSpecialBar()">Special</a></li>
+                    </ul>
+                </div>
+                <div id="nav-special-bar" class="navbar navbar-expand justify-content-center my-0 py-3 hide">
+                    <button type="button" class="btn btn-outline-success mx-2" onclick="align()">Align</button>
+                    <button type="button" class="btn btn-outline-success mx-2" onclick="toggleDark()" id="nav-dark-btn">Dark</button>
+                    <button type="button" class="btn btn-outline-success mx-2" onclick="toggleScrollBar()">Scroll</button>
+                    <button type="button" class="btn btn-outline-success mx-2" onclick="setImage()">Random</button>
+                </div>
+            </nav>
+            <div id="main-scroll-bar" class="hide">
+                <div id="main-progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" title="progressbar"></div>
+            </div>
+        </header>
+        <main></main>
+        <div id="main-popup-box" class="popup-box hide">
+            <span id="main-popup-close" class="popup-close">&times;</span>
+            <img id="main-popup-img" class="popup-img" alt="popup-img"/>
+            <div id="main-popup-caption" class="popup-caption"></div>
+        </div>
+        <a href="javascript:void(0)" id="main-to-top" class="to-top-btn hide" title="to-top" onclick="toTop()">
+            <span class="fa fa-angle-double-up">
+        </a>
+        <footer>
+            <p class="p-2">Last Updated: Nov 2025</p>
+        </footer>
+        <script src="/js/script.js"></script>
+        <script src="/js/spa.js" type="module"></script>
+    </body>
+</html>
