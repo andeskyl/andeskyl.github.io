@@ -6,9 +6,13 @@
             <h3>Secure Multi-Party Computation</h3>
             <ul>
                 <li><div class="paper">
-                    <p class="title">Sort, Sweep, Mirror: Batch Private Interval Lookup with Logarithmic Cost</a>
+                    <a class="title no-dec" href="https://www.computer.org/csdl/proceedings-article/sp/2026/606500c105/2bojwE2mjUQ" target="_blank">Sort, Sweep, Mirror: Batch Private Interval Lookup with Logarithmic Cost</a>
                     <p class="author"><b>Andes Y. L. Kei</b>, Lucien K. L. Ng, Jack P. K. Ma, Sherman S. M. Chow</p>
                     <p class="venue">IEEE S&P 2026 (AR: 12.8% = 118/925 for Cycle 1)</p>
+                    <p class="abs-btn"><a href="javascript:void(0);" class="no-dec">View Abstract ▸</a></p>
+                    <p class="abstract hide">
+                        Secure multiparty computation often requires table lookups and piecewise polynomial evaluation for efficiency. Hiding both the table and the accessed entry is essential. Existing work on private lookup table (LUT) protocols either incur Ω(mL) computation and communication (Eurocrypt '24), where ℓ is the input bitwidth, m is the output bitwidth, and L = 2^ℓ, or are optimized for small tables (NDSS '25). Realizing 𝒪(ℓ log L)$ communication and 𝒪((ℓ + m) log L) computation per query for the first time, we propose a batch private LUT protocol that overcomes these limitations by processing K lookups with 𝒪(K log L) secure comparisons. More generally, our approach extends to private interval LUT (ILUT) enabling efficient interval-based lookups in batches. Applications include private machine learning over a large input range, which small LUTs cannot approximate accurately. Notably, it supports inverse-square-root approximation and secure multiplication common in quantized neural networks, where outputs are dependent on the private model weights. Systematic experiments demonstrate that our protocol reduces communication by 10.56- to 1984-fold over the state of the art for private LUTs with tables ranging from 2^16 to 2^24 entries. Moreover, it supports >2^11 lookups per second for a 2^24-entry table in a local-area network and >2^9 in a wide-area network.
+                    </p>
                 </div></li>
                 <li><div class="paper">
                     <a class="title no-dec" href="https://www.ndss-symposium.org/ndss-paper/shaft-secure-handy-accurate-and-fast-transformer-inference/" target="_blank">SHAFT: Secure, Handy, Accurate, and Fast Transformer Inference</a>
