@@ -221,6 +221,9 @@ function paperInit() {
 			abs_btn.onclick = function() {
 				abstract.classList.toggle("hide");
 				abs_btn.textContent = abstract.classList.contains("hide") ? "View Abstract ▸" : "Hide Abstract ▾";
+				// trigger window.onscroll event (for updating progress bar)
+				window.scrollTo(window.scrollX, window.scrollY - 1);
+				window.scrollTo(window.scrollX, window.scrollY + 1);
 			}
 		}
 	}
