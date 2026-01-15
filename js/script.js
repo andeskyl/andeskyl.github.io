@@ -149,7 +149,7 @@ function toggleScrollBar() {
 
 
 /* about images */
-const num_img = 6;
+const num_img = 3;
 
 function imgIsValid(img_str) {
 	let img_int = parseInt(img_str, 10);
