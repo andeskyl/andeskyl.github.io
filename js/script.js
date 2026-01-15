@@ -182,7 +182,7 @@ const popup_srcs = {
 const popup_texts = {
 	"popup-estr-cuhk": "Exposure to the admission brochure (2022-23) of the Faculty of Engineering, CUHK.",
 	"popup-pkm-team": "My previous (very long time ago...) Pokemon team.",
-	"popup-ptcg-deck": "My current (2025/06) PTCG deck."
+	"popup-ptcg-deck": "My current (2025/12) PTCG deck."
 };
 
 function popupInit() {
