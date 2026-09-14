@@ -3,15 +3,16 @@
         <div>
             <h2 class="section-heading text-start">My Research</h2>
             <hr/>
-            <h3>Secure Multi-Party Computation</h3>
-            <ul>
+            <h3>Privacy-Preserving Machine Learning</h3>
                 <li><div class="paper">
-                    <a class="title no-dec" href="https://doi.ieeecomputersociety.org/10.1109/SP63933.2026.00113" target="_blank">Sort, Sweep, Mirror: Batch Private Interval Lookup with Logarithmic Cost</a>
-                    <p class="author"><b>Andes Y. L. Kei</b>, Lucien K. L. Ng, Jack P. K. Ma, Sherman S. M. Chow</p>
-                    <p class="venue"><a class="no-dec" href="/static/slides/26-sp-LUT.pdf" target="_blank">IEEE S&P 2026</a> (AR: 12.8% = 118/925 for Cycle 1)</p>
+                    <a class="title no-dec" href="https://eprint.iacr.org/2026/2005" target="_blank">SoK: Private Transformer Inference Across Systems, Models, and Cryptography</a>
+                    <p class="author"><b>Andes Y. L. Kei</b>, Sherman S. M. Chow</p>
+                    <p class="venue">Cryptology ePrint Archive 2026/2005</p>
                     <p class="abs-btn"><a href="javascript:void(0);" class="no-dec">View Abstract ▸</a></p>
                     <p class="abstract hide">
-                        Secure multiparty computation often requires table lookups and piecewise polynomial evaluation for efficiency. Hiding both the table and the accessed entry is essential. Existing work on private lookup table (LUT) protocols either incur Ω(mL) computation and communication (Eurocrypt '24), where ℓ is the input bitwidth, m is the output bitwidth, and L = 2^ℓ, or are optimized for small tables (NDSS '25). Realizing 𝒪(ℓ log L)$ communication and 𝒪((ℓ + m) log L) computation per query for the first time, we propose a batch private LUT protocol that overcomes these limitations by processing K lookups with 𝒪(K log L) secure comparisons. More generally, our approach extends to private interval LUT (ILUT) enabling efficient interval-based lookups in batches. Applications include private machine learning over a large input range, which small LUTs cannot approximate accurately. Notably, it supports inverse-square-root approximation and secure multiplication common in quantized neural networks, where outputs are dependent on the private model weights. Systematic experiments demonstrate that our protocol reduces communication by 10.56- to 1984-fold over the state of the art for private LUTs with tables ranging from 2^16 to 2^24 entries. Moreover, it supports >2^11 lookups per second for a 2^24-entry table in a local-area network and >2^9 in a wide-area network.
+                        Private inference can protect user queries and model weights without trusted hardware or statistical privacy relaxations, but transformers combine large secret matrix multiplications, costly nonlinearities, and sequential autoregressive execution. Prior surveys organize the literature mainly by cryptographic backend, deployment setting, or supported operation, obscuring when techniques remain applicable or composable across execution phases, model adaptations, or security boundaries.
+                        <br><br>
+                        We systematize 58 cryptographic private transformer frameworks (2022–2026) across three interacting levels: systems (execution and optimization), models (cryptography–machine learning co-design and adaptation), and cryptography (secure realization of transformer operations). This analysis reveals two recurring cross-backend applicability constraints: optimizations do not transfer unchanged across execution phases when they require values not yet available, while data-dependent pruning, cache management, routing, and sparsity require private execution structure to be hidden, constrained, predicted, or disclosed. Against an output-only reference baseline, we identify four classes of security concerns affecting 5 frameworks and synthesize composition boundaries in maliciously secure designs. We find that 16 frameworks rely on empirically calibrated or distribution-specific mechanisms and 21 require additional training, limiting generalization and cross-framework comparability. We distill these findings into 12 open problems and 16 outlooks spanning protocol efficiency, cross-level co-design, dynamic execution, security, evaluation, and scalability.
                     </p>
                 </div></li>
                 <li><div class="paper">
@@ -25,6 +26,18 @@
                         SHAFT, our proposed system, provides a secure, handy, accurate, and fast transformer inference framework for deployment. Highlights of our contributions include 1) the first constant-round (independent of sequence length) softmax protocol for transformers, using input clipping and an ordinary differential equation characterization, and 2) a highly accurate GELU protocol on a novel characterization designed for Fourier series approximation. Extending to broader contexts, our new protocols also apply to general neural networks that use softmax as the final layer and to transformer architectures with different activation functions. Remarkably, SHAFT outperforms state-of-the-art SIGMA (PETS 2024), which uses secret sharing, and BumbleBee (NDSS 2025), which additionally uses RLWE-based homomorphic encryption. More specifically, SHAFT reduces communication by 62–70% and is 1.8–2.4× faster than SIGMA, while also surpassing BumbleBee in terms of running time by 2.6–3.7× under LAN settings. Alongside these improvements, SHAFT attains accuracy comparable to plaintext models, confirming its numerical stability. Next in this progression, SHAFT provides an accessible open-source framework for secure and handy deployment by smoothly integrating with the Hugging Face library (EMNLP Demos 2020).
                     </p>
                 </div></li>
+            <hr/>
+            <h3>Secure Multi-Party Computation</h3>
+            <ul>
+                <li><div class="paper">
+                    <a class="title no-dec" href="https://doi.org/10.1109/SP63933.2026.00113" target="_blank">Sort, Sweep, Mirror: Batch Private Interval Lookup with Logarithmic Cost</a>
+                    <p class="author"><b>Andes Y. L. Kei</b>, Lucien K. L. Ng, Jack P. K. Ma, Sherman S. M. Chow</p>
+                    <p class="venue"><a class="no-dec" href="/static/slides/26-sp-LUT.pdf" target="_blank">IEEE S&P 2026</a> (AR: 12.8% = 118/925 for Cycle 1)</p>
+                    <p class="abs-btn"><a href="javascript:void(0);" class="no-dec">View Abstract ▸</a></p>
+                    <p class="abstract hide">
+                        Secure multiparty computation often requires table lookups and piecewise polynomial evaluation for efficiency. Hiding both the table and the accessed entry is essential. Existing work on private lookup table (LUT) protocols either incur Ω(mL) computation and communication (Eurocrypt '24), where ℓ is the input bitwidth, m is the output bitwidth, and L = 2^ℓ, or are optimized for small tables (NDSS '25). Realizing 𝒪(ℓ log L) communication and 𝒪((ℓ + m) log L) computation per query for the first time, we propose a batch private LUT protocol that overcomes these limitations by processing K lookups with 𝒪(K log L) secure comparisons. More generally, our approach extends to private interval LUT (ILUT) enabling efficient interval-based lookups in batches. Applications include private machine learning over a large input range, which small LUTs cannot approximate accurately. Notably, it supports inverse-square-root approximation and secure multiplication common in quantized neural networks, where outputs are dependent on the private model weights. Systematic experiments demonstrate that our protocol reduces communication by 10.56- to 1984-fold over the state of the art for private LUTs with tables ranging from 2^16 to 2^24 entries. Moreover, it supports >2^11 lookups per second for a 2^24-entry table in a local-area network and >2^9 in a wide-area network.
+                    </p>
+                </div></li>
             </ul>
             <hr/>
         </div>
@@ -32,8 +45,14 @@
         <h2>Professional Activities</h2>
             <hr/>
             <ul>
-                <li>External Reviewers:
+                <li>Program Commitee:
                     <ul>
+                        <li>2027: AAAI</li> 
+                    </ul>
+                </li>
+                <li>Reviewers:
+                    <ul>
+                        <li>2027: PoPETs</li>
                         <li>2026: ARES, AsiaCCS, CODASPY, Eurocrypt, IJCAI, TSC</li>
                         <li>2025: ARES, AsiaCCS, Asiacrypt, CODASPY, DSC, ESORICS, Indocrypt, NDSS, NSS, PKC, S&P, TDSC</li>
                         <li>2024: ARES, Asiacrypt, CANS, ICICS, ISISC, RAID, TDSC, Usenix Security</li>
